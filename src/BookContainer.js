@@ -13,10 +13,10 @@ const BookContainer = (props) => {
 
     return (
         <>
-        <h1>BookContainer</h1>
-        <BookList />
-        <Search />
+        <h1>🔥Lit Books!🔥</h1>
         <AddBookForm />
+        <Search />
+        <BookList />
         </>
         
 
