@@ -1,5 +1,8 @@
+
+
 .App {
   text-align: center;
+  background-color: #E6C8C8;
 }
 
 .App-logo {
@@ -36,6 +39,34 @@
     transform: rotate(360deg);
   }
 }
-.form1 {
-  width: 50%;
+
+/* Header menu */
+ #menu {
+   background-color: #E6C8C8;
+   font-size: 24px;
+   font-weight: bold;
+ }
+
+
+ /* Search bar */
+ .searchBar {
+   width: 15%;
+  border: 5px solid #E6C8C8;
+  border-radius: 16px;
+ }
+
+ /* container for books! */
+ .container-parent {
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin-top: 40px;
+ }
+
+.lit {
+  font-size: 40px;
+  color: white;
 }
+
+
+

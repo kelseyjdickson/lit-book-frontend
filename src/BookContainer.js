@@ -1,7 +1,9 @@
 import React from 'react'
 import BookList from "./BookList"
-import Search from './Search'
-import AddBookForm from './AddBookForm';
+
+
+
+
 
 
 class BookContainer extends React.Component {
@@ -13,12 +15,9 @@ class BookContainer extends React.Component {
         
         return (
             <>
-                <h1>Lit Books!</h1>
-                {/* <AddBookForm addBook={this.props.addBook}/> */}
-                
-                {/* <Search searchTerm={this.props.searchTerm}
-                changeSearchTerm={this.changeSearchTerm}/> */}
-                
+                <h1 class="lit">Lit Books!</h1>
+               
+               
                 <BookList books={this.props.books}
                 deleteBookFromArray={this.props.deleteBookFromArray}/>
                 

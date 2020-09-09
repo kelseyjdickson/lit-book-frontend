@@ -1,6 +1,7 @@
 import React from 'react'
 import { Form } from 'react-bootstrap';
-// import { Button } from 'react-bootstrap';
+ import { Button } from 'react-bootstrap';
+
 
 import './App.css'
 
@@ -27,7 +28,7 @@ class AddBookForm extends React.Component {
     }
 
     handleSubmit = evt => {
-        console.log("HIT BUTTON")
+       
         evt.preventDefault()
         console.log("STATE",this.state)
         
@@ -53,6 +54,8 @@ class AddBookForm extends React.Component {
             console.log('newlycreate',newlyCreatedBook)
            this.props.addBook(newlyCreatedBook)
         })
+        
+
     }
 
     render(){
@@ -67,9 +70,9 @@ class AddBookForm extends React.Component {
              <label>Genre:<input type="text" name="genre" value={this.state.genre} onChange={this.handleAllInputs}/></label>
              <label>Book Image:<input type="text" name="book_img" value={this.state.book_img} onChange={this.handleAllInputs}/></label>
              <label>Description:<input type="text" name="description" value={this.state.description} onChange={this.handleAllInputs} /></label>
-        
-             <input type="submit" value="Add Book" />
+             <input type="submit" value="Add Book"/>
         </form>
+        
 
   
   </>

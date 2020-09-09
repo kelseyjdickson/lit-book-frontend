@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from 'react-bootstrap';
+
+import { Grid, Image } from 'semantic-ui-react'
 
 
 class BookCard extends React.Component{
@@ -18,6 +19,7 @@ class BookCard extends React.Component{
             })
 
     }
+  
     
     
     render(){
@@ -28,22 +30,49 @@ class BookCard extends React.Component{
 
 
     return (
-        <>
         
-        <h3>Title: {book_title}</h3>
-        <h3>Author: {author}</h3>
-       
-        <h4>Genre: {genre}</h4>
-        <img src={book_img} alt="bookcover"/>
-        <h4>Description: {description}</h4>
-        <form>
-            <label></label>
-            <label></label>
-        </form>
+
+
+   <div class="container-cards">
+    
+        <div class="ui centered cards">
+
+        <div class="ui grid">
+        <div class="column">
+            <div class="ui card" >
+                <div class="image">
+                 <img src={book_img} alt="bookcover"/>
+             </div>
+            
+            <div class="content">
+           
+                    <a class="header">{book_title}</a>
+                    <div class="meta">
+                    <span class="author">{author}</span></div>
+                    <div class="description">{description}</div>
+                    <div class="genre">{genre}</div>
+                </div>
+             
+             
+             <div class="extra content">
+                <a onClick={this.handleDelete}>
+                <i class="book icon"></i>Delete Lit Book!</a>
+            </div>
+          </div>
+       </div>
+       </div>
+       </div>
+       </div>
+           
+        
+
+          
+         
+  
          
        
-        <Button variant="secondary"onClick={this.handleDelete} >Delete Book</Button>{' '}
-    </>
+       
+    
      )
 }
 }
