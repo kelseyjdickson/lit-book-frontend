@@ -6,7 +6,7 @@ class ReviewForm extends React.Component {
     state = {
         review:"",
         rating:"",
-        book_id:""
+        book_id:this.props.books[0] ? this.props.books[0].id : 0
     }
 
     handleAllInputs = (evt) => {
@@ -25,7 +25,7 @@ class ReviewForm extends React.Component {
         review:this.state.review,
         rating:this.state.rating,
         book_id:this.state.book_id,
-        user_id: 7
+        user_id: 1
         } 
         fetch('http://localhost:3000/reviews',{
             method: "POST",
@@ -49,16 +49,16 @@ class ReviewForm extends React.Component {
         <>
 
 
-        
-        <form onSubmit={this.handleSubmit}>Rating 
-             <label>Review:</label><input type="text" name="review"value={this.state.review} onChange={this.handleAllInputs} />
-             <label>Rating:</label><input type="text" name="rating"value={this.state.rating} onChange={this.handleAllInputs} />
-             <label>Book:</label>
-             <select name="book_id"value={this.state.book_id}onChange={this.handleAllInputs}>
+        <h1 class="lit">Let's Review a Lit Book!</h1>
+        <form class="form" onSubmit={this.handleSubmit}>
+             <select class="select"name="book_id"value={this.state.book_id}onChange={this.handleAllInputs}>
 
                     {options}
              </select>
-             <input type="submit" value="Add Review"/>
+             <label>Review<input type="text" name="review"value={this.state.review} onChange={this.handleAllInputs} /></label>
+             <label>Rating<input type="text" name="rating"value={this.state.rating} onChange={this.handleAllInputs} /></label>
+             <label>Book:</label>
+             <input class="button"type="submit" value="Add Review"/>
               
         </form>
 

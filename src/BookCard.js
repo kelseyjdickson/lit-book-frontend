@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Grid, Image } from 'semantic-ui-react'
+
 
 
 class BookCard extends React.Component{
@@ -21,15 +21,36 @@ class BookCard extends React.Component{
     }
   
     
+  
+    
+    
     
     render(){
+       
+        
+
+        let rating = this.props.reviews.map((rate) => {
+            return <li >{`${rate.review} | ${rate.rating}` } </li>
+        })
+
+        let review = this.props.reviews.map((review) => {
+            return review.review
+        })
+        
+        // let {review} = this.props.reviews
+
+
    
   let { book_title, author, genre, book_img, description} = this.props.book
-    
+   
+
+
 
 
 
     return (
+<>
+        
         
 
 
@@ -44,27 +65,31 @@ class BookCard extends React.Component{
                  <img src={book_img} alt="bookcover"/>
              </div>
             
-            <div class="content">
+            <div class="content" style={{
+        height: "580px"}}>
            
                     <a class="header">{book_title}</a>
                     <div class="meta">
                     <span class="author">{author}</span></div>
                     <div class="description">{description}</div>
                     <div class="genre">{genre}</div>
+                      <ul class="rating">{rating}</ul> 
+                       
+                   
                 </div>
              
              
-             <div class="extra content">
+             <div class="extra content" id="delete">
                 <a onClick={this.handleDelete}>
-                <i class="book icon"></i>Delete Lit Book!</a>
+                <i class="book icon"id="delete"></i>Delete Lit Book!</a>
             </div>
           </div>
        </div>
        </div>
        </div>
-       </div>
+        </div> 
            
-        
+       </>
 
           
          

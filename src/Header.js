@@ -15,7 +15,7 @@ class Header extends React.Component {
         return (
             <>
             <div class="logo">
-                <img src={logo}/>
+                <img src={logo} alt="logo"/>
                 </div>
             </>
     

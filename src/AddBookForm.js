@@ -1,6 +1,6 @@
 import React from 'react'
-import { Form } from 'react-bootstrap';
- import { Button } from 'react-bootstrap';
+
+
 
 
 import './App.css'
@@ -30,7 +30,7 @@ class AddBookForm extends React.Component {
     handleSubmit = evt => {
        
         evt.preventDefault()
-        console.log("STATE",this.state)
+        
         
         let structuredBackend = {
             book_title: this.state.book_title,
@@ -63,19 +63,18 @@ class AddBookForm extends React.Component {
 
     return (
         <>
-        <h1>AddBookForm</h1>
-        <form onSubmit={this.handleSubmit}>
-             <label>Book Title:</label><input type="text" name="book_title"value={this.state.book_title} onChange={this.handleAllInputs} />
+        <h1 class="lit">Add a Lit Book! </h1>
+        <form class="form"onSubmit={this.handleSubmit}>
+             <label>Book Title:<input type="text" name="book_title"value={this.state.book_title} onChange={this.handleAllInputs} /></label>
              <label>Author:<input type="text" name="author" value={this.state.author} onChange={this.handleAllInputs}/></label>
              <label>Genre:<input type="text" name="genre" value={this.state.genre} onChange={this.handleAllInputs}/></label>
              <label>Book Image:<input type="text" name="book_img" value={this.state.book_img} onChange={this.handleAllInputs}/></label>
              <label>Description:<input type="text" name="description" value={this.state.description} onChange={this.handleAllInputs} /></label>
-             <input type="submit" value="Add Book"/>
+             <input class="button"type="submit" value="Add Lit Book"/>
         </form>
         
-
-  
   </>
+  
 
         
 

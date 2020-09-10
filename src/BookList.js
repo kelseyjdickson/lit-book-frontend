@@ -1,15 +1,16 @@
 import React from 'react'
 import BookCard from './BookCard'
-import { Button } from 'semantic-ui-react'
-import { Card } from 'semantic-ui-react'
+
 
 
 
 
 const BookList = (props) => {
-    console.log("POOP",props)
+  
     
-   
+ 
+ 
+ 
     return (
       <>
           
@@ -18,7 +19,8 @@ const BookList = (props) => {
           {props.books.map(bookObj => <BookCard 
           deleteBookFromArray={props.deleteBookFromArray}
           key={bookObj.id} 
-          book={bookObj} />)}
+          book={bookObj} 
+          reviews={bookObj.reviews}/>) }
         </ul>
         </div>
       </>

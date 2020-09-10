@@ -8,6 +8,7 @@ import Header from './Header';
 import ReviewForm from './ReviewForm';
 import {Switch, Route} from 'react-router-dom'
 import NavBar from './NavBar'
+import Login from './Login'
 
 
 
@@ -15,7 +16,9 @@ class App extends React.Component {
   state = {
   
     books: [],
-    searchTerm:''
+    searchTerm:'',
+    username: ""
+  
   }
 
   componentDidMount(){
@@ -68,6 +71,32 @@ class App extends React.Component {
     })
     
   }
+
+  // LOGIN STUFF
+
+
+
+  handleLoginSubmit = (userInfo) =>{
+    console.log("Hi I was clicked")
+    fetch("http://localhost:3000/users/login", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(userInfo)
+    })
+    .then(res => res.json())
+    .then(this.handleResponse)
+  }
+  renderForm = (routerProps) => {
+    if(routerProps.location.pathname === '/login'){
+      return <Login handleSubmit={this.handleLoginSubmit} />
+    }
+  }
+
+
+
+
   render(){
     let filteredBook = this.state.books.filter((bookObject) => {
       
@@ -77,23 +106,47 @@ class App extends React.Component {
   return (
     <>
     <div class="App">
-  <NavBar/>
-   <SearchPage
-     searchTerm={this.state.searchTerm}
-     changeSearchTerm={this.changeSearchTerm}/>
+  {/* NAV BAR */}
+    <NavBar/>
     
+    {/* SEARCH */}
+    <SearchPage
+      searchTerm={this.state.searchTerm}
+      changeSearchTerm={this.changeSearchTerm}/>
+      <Header />
+      {/* LOGIN */}
+      <Route path="/login" component={Login} render={this.renderForm}
+      handleSubmit={this.handleLoginSubmit}/>
+     
+     {/* ADD FORM */}
+    
+    <Route path="/form">
+      <AddBookForm addBook={this.addBook}/>
+    </Route>
 
    
-   <Header />
-  <BookContainer 
-    books={filteredBook}
-    deleteBookFromArray={this.deleteBookFromArray}
-   />
-   <AddBookForm addBook={this.addBook}/>
-   <ReviewForm 
-   books={this.state.books}
-   replaceBook={this.replaceBook}
-   />
+      
+{/* REVIEW FORM */}
+
+  <Route path="/review">
+    <ReviewForm 
+    books={this.state.books}
+    replaceBook={this.replaceBook}
+    />
+    </Route>
+    
+    <Switch>
+    
+    {/* BOOK CONTAINER */}
+    <BookContainer 
+      books={filteredBook}
+      deleteBookFromArray={this.deleteBookFromArray}
+      />
+     
+    </Switch>
+
+   
+  
    </div>
    </>
   );
