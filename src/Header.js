@@ -9,18 +9,16 @@ import logo from './images/litbooks1.png'
 
 class Header extends React.Component {
     render() {
-       
-       
-        
         return (
             <>
-            <div class="logo">
-                <img src={logo} alt="logo"/>
+                <div class="logo">
+                    <img src={logo} alt="logo" />
                 </div>
             </>
-    
 
-    )}
+
+        )
+    }
 }
 
 
