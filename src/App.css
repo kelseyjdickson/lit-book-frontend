@@ -1,5 +1,8 @@
+
+
 .App {
   text-align: center;
+  background-color: #E6C8C8;
 }
 
 .App-logo {
@@ -35,4 +38,96 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Header menu */
+ #menu {
+   background-color: #E6C8C8;
+   font-size: 24px;
+   font-weight: bold;
+ }
+
+
+ /* Search bar */
+ .searchBar {
+   width: 15%;
+  border: 5px solid #E6C8C8;
+  border-radius: 16px;
+ }
+
+ /* container for books! */
+ .container-parent {
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-self: baseline;
+   /* flex-wrap: wrap-reverse; */
+ 
+ }
+/* Header's Lit Books */
+.lit {
+  font-size: 40px;
+  color: white;
+}
+
+/* Forms Search & Review */
+.form{
+  padding: 40px;
+  margin: 40px;
+  color: white;
+  
+  
+}
+
+input[type=text], select  {
+padding: 12px 20px;
+margin: 8px 0;
+border: 3px;
+/* border-radius: 5px; */
+}
+
+label, .select{
+  font-size: 30px;
+}
+
+
+.item {
+  font-size: 40px;
+  color: white;
+}
+
+.author{
+  color:  #E6C8C8;
+  font-weight: bold;
+}
+
+.genre {
+ padding: 40px;
+ font-size: 25px;
+ font-weight: bold;
+ 
+}
+
+#delete {
+  padding: 20px;
+  color:  #E6C8C8;
+  
+}
+
+
+/* BUtton for form */
+
+.button{
+  padding: 20px;
+  
+}
+#id{
+  padding: 25px;
+}
+
+
+/* Card */
+
+.description {
+  text-align: center;
 }

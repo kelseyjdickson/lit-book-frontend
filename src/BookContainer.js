@@ -1,12 +1,22 @@
 import React from 'react'
 import BookList from "./BookList"
-import Search from './Search'
-import AddBookForm from './AddBookForm';
+
+class BookContainer extends React.Component {
+    render() {
+        this.props.books.map((booksObj) => {
+            return <BookList key={booksObj.id} books={booksObj} />
+        })
+
+        return (
+            <>
+                <h1 class="lit">Lit Books!</h1>
+
+                <BookList books={this.props.books}
+                    deleteBookFromArray={this.props.deleteBookFromArray} />
+            </>
 
 
-
-
-
+<<<<<<< HEAD
 const BookContainer = (props) => {
 
 
@@ -22,9 +32,11 @@ const BookContainer = (props) => {
         
 
     )
+=======
+        )
+    }
+>>>>>>> kelsey
 }
-
-
 
 
 export default BookContainer
