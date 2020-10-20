@@ -131,3 +131,7 @@ label, .select{
 .description {
   text-align: center;
 }
+
+.li-font{
+  font: 20px;
+}
