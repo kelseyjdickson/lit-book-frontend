@@ -71,6 +71,16 @@ class App extends React.Component {
 
   }
 
+  // deleteBookFromArray = (id) => {
+  //   this.setState(prevState => {
+  //     return {
+  //     books: prevState.books.filter(book =>  book.id !== id)
+        
+  //     }
+      
+  //   });
+  // }
+
 
 
 
@@ -83,7 +93,7 @@ class App extends React.Component {
 
     return (
       <>
-        <div class="App">
+        <div className="App">
           {/* NAV BAR */}
           <NavBar />
 
@@ -110,7 +120,7 @@ class App extends React.Component {
             />
           </Route>
 
-          <Switch>
+          {/* <Switch> */}
 
             {/* BOOK CONTAINER */}
             <BookContainer
@@ -118,7 +128,7 @@ class App extends React.Component {
               deleteBookFromArray={this.deleteBookFromArray}
             />
 
-          </Switch>
+          {/* </Switch> */}
 
 
 

@@ -10,8 +10,8 @@ const BookList = (props) => {
   return (
     <>
 
-      <div class="display">
-        <ul class="container-parent">
+      <div className="display">
+        <ul className="container-parent">
           {props.books.map(bookObj => <BookCard
             deleteBookFromArray={props.deleteBookFromArray}
             key={bookObj.id}
