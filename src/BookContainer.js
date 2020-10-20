@@ -9,7 +9,7 @@ class BookContainer extends React.Component {
 
         return (
             <>
-                <h1 class="lit">Lit Books!</h1>
+                <h1 className="lit">Lit Books!</h1>
 
                 <BookList books={this.props.books}
                     deleteBookFromArray={this.props.deleteBookFromArray} />

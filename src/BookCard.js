@@ -22,38 +22,38 @@ class BookCard extends React.Component {
 
     render() {
         let rating = this.props.reviews.map((rate) => {
-            return <li className="li-font">{`${rate.review} | ${rate.rating}`} </li>
+            return <li key={rate.rating}className="li-font">{`${rate.review} | ${rate.rating}`} </li>
         })
 
         let { book_title, author, genre, book_img, description } = this.props.book
 
     return (
             <>
-                <div class="container-cards">
-                    <div class="ui centered cards">
-                        <div class="ui grid">
-                            <div class="column">
-                                <div class="ui card" >
-                                    <div class="image">
+                <div className="container-cards">
+                    <div className="ui centered cards">
+                        <div className="ui grid">
+                            <div className="column">
+                                <div className="ui card" >
+                                    <div className="image">
                                         <img src={book_img} alt="bookcover" />
                                     </div>
 
-                                    <div class="content" style={{
+                                    <div className="content" style={{
                                         height: "580px"
                                     }}>
 
-                                        <p class="header">{book_title}</p>
-                                        <div class="meta">
-                                            <span class="author">{author}</span></div>
-                                        <div class="description">{description}</div>
-                                        <div class="genre">{genre}</div>
-                                        <ul class="rating">{rating}</ul>
+                                        <p className="book-title ">{book_title}</p>
+                                        <div className="meta">
+                                            <span className="author">{author}</span></div>
+                                        <div className="description">{description}</div>
+                                        <div className="genre">{genre}</div>
+                                        <ul className="rating">{rating}</ul>
                                      </div>
 
 
-                                    <div class="extra content" id="delete">
+                                    <div className="extra content" id="delete">
                                         <a href="delete"onClick={this.handleDelete} >
-                                            <i class="book icon" id="delete"></i>Delete Lit Book!</a>
+                                            <i className="book icon" id="delete"></i>Delete Lit Book!</a>
                                     </div>
                                 </div>
                             </div>

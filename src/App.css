@@ -97,8 +97,9 @@ label, .select{
 }
 
 .author{
-  color:  #E6C8C8;
+  color:  #E0AA98;;
   font-weight: bold;
+  font-size: 23px;
 }
 
 .genre {
@@ -130,8 +131,16 @@ label, .select{
 
 .description {
   text-align: center;
+  font-size: 18px;
+  word-spacing: 5px;
 }
 
 .li-font{
-  font: 20px;
+  font-size: 19px;
 }
+
+.book-title {
+  font-size: 30px;
+  font-weight: 200;
+}
+
