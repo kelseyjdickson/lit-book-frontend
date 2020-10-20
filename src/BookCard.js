@@ -22,7 +22,7 @@ class BookCard extends React.Component {
 
     render() {
         let rating = this.props.reviews.map((rate) => {
-            return <li >{`${rate.review} | ${rate.rating}`} </li>
+            return <li className="li-font">{`${rate.review} | ${rate.rating}`} </li>
         })
 
         let { book_title, author, genre, book_img, description } = this.props.book
