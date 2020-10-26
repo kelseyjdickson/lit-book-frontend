@@ -9,3 +9,8 @@
   <li>Search for a book by title using the search bar</li>
   <li>Delete a book from Lit Book list</li>
   </ul>
+  <p>Click below to watch a demo</p>
+<div align="center">
+  <a href="https://youtu.be/Vl2AZpU1j3g">
+    <img src="src/images/litbooks1.png" alt="lit books logo" height="50px"</a>
+    </div>
