@@ -10,7 +10,7 @@
   <li>Delete a book from Lit Book list</li>
   </ul>
   <p>Click below to watch a demo</p>
-<div align="center">
+<div>
   <a href="https://youtu.be/Vl2AZpU1j3g">
-    <img src="src/images/litbooks1.png" alt="lit books logo" height="50px"</a>
+    <img src="src/images/demo_video.png" alt="lit books logo" height="50px"</a>
     </div>
