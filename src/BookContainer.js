@@ -16,26 +16,8 @@ class BookContainer extends React.Component {
             </>
 
 
-<<<<<<< HEAD
-const BookContainer = (props) => {
-
-
-
-    return (
-        <>
-        <h1>BookContainer</h1>
-        <p>Testing</p>
-        <BookList />
-        <Search />
-        <AddBookForm />
-        </>
-        
-
-    )
-=======
         )
     }
->>>>>>> kelsey
 }
 
 
